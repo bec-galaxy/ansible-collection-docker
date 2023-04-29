@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 840 565" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Element-13">
+        <g id="text" transform="matrix(27,0,0,27,213.233,529.657)">
+        </g>
+        <text x="105.22px" y="529.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">main.yml</text>
+        <g id="folder">
+            <path d="M76,518L81.5,518L76,512.5L76,518M69,511L77,511L83,517L83,529C83,530.1 82.1,531 81,531L69,531C67.9,531 67,530.1 67,529L67,513C67,511.9 67.9,511 69,511M81,527L81,525L72,525L72,527L81,527M77,523L77,521L69,521L69,523L77,523Z" style="fill:#ff5252;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g id="Element-12">
+        <g id="text1" transform="matrix(27,0,0,27,422.814,489.657)">
+        </g>
+        <text x="145.22px" y="489.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">docker-compose.yml.j2</text>
+        <g id="folder1">
+            <path d="M105.142,472.084C109.764,472.654 113.726,472.937 117.028,472.933C120.278,472.93 124.165,472.647 128.69,472.084L128.69,475.198C124.165,475.76 120.278,476.043 117.028,476.046C113.726,476.05 109.764,475.767 105.142,475.198L105.142,472.084Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M110.519,474.59L108.935,490L112.387,489.986L112.897,475.495L110.519,474.59ZM122.916,474.575L124.458,489.971L121.048,489.971L120.538,475.48L122.916,474.575Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <rect x="105" y="478.509" width="23.548" height="1.811" style="fill:#616161;fill-rule:nonzero;"/>
+            <rect x="115.868" y="474.575" width="1.811" height="4.303" style="fill:#616161;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g id="Element-11">
+        <g id="text2" transform="matrix(27,0,0,27,206.26,449.657)">
+        </g>
+        <text x="125.22px" y="449.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">shared</text>
+        <g id="folder2">
+            <path d="M104.849,451.835L84.688,451.835C83.213,451.835 82,450.621 82,449.146L82,433.018C82,431.526 83.196,430.33 84.688,430.33L92.752,430.33L95.441,433.018L104.849,433.018C106.323,433.018 107.537,434.231 107.537,435.706L84.688,435.706L84.688,449.146L87.564,438.394L110.508,438.394L107.443,449.818C107.134,450.988 106.086,451.835 104.849,451.835Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M67,438.33L66,437.33L58,445.33L50,437.33L49,438.33L58,447.33L67,438.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Element-10">
+        <g id="text3" transform="matrix(27,0,0,27,222.277,409.657)">
+        </g>
+        <text x="105.22px" y="409.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">templates</text>
+        <g id="folder3">
+            <g>
+                <path d="M84.849,411.835L64.688,411.835C63.213,411.835 62,410.621 62,409.146L62,393.018C62,391.526 63.196,390.33 64.688,390.33L72.752,390.33L75.441,393.018L84.849,393.018C86.323,393.018 87.537,394.231 87.537,395.706L64.688,395.706L64.688,409.146L67.564,398.394L90.508,398.394L87.443,409.818C87.134,410.988 86.086,411.835 84.849,411.835Z" style="fill:#a1887f;fill-rule:nonzero;"/>
+                <path d="M73.559,408.917L80.727,408.917L80.727,407.188L73.559,407.188L73.559,408.917ZM73.559,412.372L80.727,412.372L80.727,410.644L73.559,410.644L73.559,412.372ZM73.559,405.46L80.727,405.46L80.727,403.731L73.559,403.731L73.559,405.46ZM73.559,400.276L73.559,402.004L80.727,402.004L80.727,400.276L73.559,400.276ZM82.52,400.276L89.688,400.276L89.688,412.372L82.52,412.372L82.52,400.276Z" style="fill:#d7ccc8;fill-rule:nonzero;"/>
+            </g>
+            <path d="M47,398.33L46,397.33L38,405.33L30,397.33L29,398.33L38,407.33L47,398.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Element-9">
+        <g id="text4" transform="matrix(27,0,0,27,216.254,369.657)">
+        </g>
+        <text x="165.22px" y="369.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">.env</text>
+        <g id="folder4">
+            <path d="M128.778,350.33L126.389,350.33L126.389,357.497L128.778,357.497L128.778,350.33M143.111,350.33L140.722,350.33L140.722,362.274L143.111,362.274L143.111,350.33M124,362.274L126.389,362.274L126.389,371.83L128.778,371.83L128.778,362.274L131.167,362.274L131.167,359.886L124,359.886L124,362.274M138.333,355.108L135.944,355.108L135.944,350.33L133.556,350.33L133.556,355.108L131.167,355.108L131.167,357.497L138.333,357.497L138.333,355.108M133.556,371.83L135.944,371.83L135.944,359.886L133.556,359.886L133.556,371.83M138.333,364.663L138.333,367.052L140.722,367.052L140.722,371.83L143.111,371.83L143.111,367.052L145.5,367.052L145.5,364.663L138.333,364.663Z" style="fill:#fbc02d;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g id="Element-8">
+        <g id="text5" transform="matrix(27,0,0,27,217.77,329.657)">
+        </g>
+        <text x="165.22px" y="329.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">data</text>
+        <g id="folder5">
+            <path d="M132.752,310.33L124.688,310.33C123.196,310.33 122,311.526 122,313.018L122,329.147C122,330.621 123.214,331.835 124.688,331.835L146.193,331.835C147.668,331.835 148.881,330.621 148.881,329.147L148.881,315.706C148.881,314.232 147.668,313.018 146.193,313.018L135.441,313.018L132.752,310.33Z" style="fill:#616161;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g id="Element-7">
+        <g id="text6" transform="matrix(27,0,0,27,241.302,289.657)">
+        </g>
+        <text x="145.22px" y="289.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">host_02</text>
+        <g id="folder6">
+            <path d="M124.849,291.835L104.688,291.835C103.213,291.835 102,290.621 102,289.146L102,273.018C102,271.526 103.196,270.33 104.688,270.33L112.752,270.33L115.441,273.018L124.849,273.018C126.323,273.018 127.537,274.231 127.537,275.706L104.688,275.706L104.688,289.146L107.564,278.394L130.508,278.394L127.443,289.818C127.134,290.988 126.086,291.835 124.849,291.835Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M87,278.33L86,277.33L78,285.33L70,277.33L69,278.33L78,287.33L87,278.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Element-6">
+        <g id="text7" transform="matrix(27,0,0,27,216.254,249.657)">
+        </g>
+        <text x="165.22px" y="249.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">.env</text>
+        <g id="folder7">
+            <path d="M128.778,230.33L126.389,230.33L126.389,237.496L128.778,237.496L128.778,230.33M143.111,230.33L140.722,230.33L140.722,242.274L143.111,242.274L143.111,230.33M124,242.274L126.389,242.274L126.389,251.83L128.778,251.83L128.778,242.274L131.167,242.274L131.167,239.885L124,239.885L124,242.274M138.333,235.107L135.944,235.107L135.944,230.33L133.556,230.33L133.556,235.107L131.167,235.107L131.167,237.496L138.333,237.496L138.333,235.107M133.556,251.83L135.944,251.83L135.944,239.885L133.556,239.885L133.556,251.83M138.333,244.663L138.333,247.052L140.722,247.052L140.722,251.83L143.111,251.83L143.111,247.052L145.5,247.052L145.5,244.663L138.333,244.663Z" style="fill:#fbc02d;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g id="Element-5">
+        <g id="text8" transform="matrix(27,0,0,27,217.77,209.657)">
+        </g>
+        <text x="165.22px" y="209.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">data</text>
+        <g id="folder8">
+            <path d="M132.752,190.33L124.688,190.33C123.196,190.33 122,191.526 122,193.018L122,209.147C122,210.621 123.214,211.835 124.688,211.835L146.193,211.835C147.668,211.835 148.881,210.621 148.881,209.147L148.881,195.706C148.881,194.232 147.668,193.018 146.193,193.018L135.441,193.018L132.752,190.33Z" style="fill:#616161;fill-rule:nonzero;"/>
+        </g>
+    </g>
+    <g id="Element-4">
+        <g id="text9" transform="matrix(27,0,0,27,241.302,169.657)">
+        </g>
+        <text x="145.22px" y="169.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">host_01</text>
+        <g id="folder9">
+            <path d="M124.849,171.835L104.688,171.835C103.213,171.835 102,170.621 102,169.146L102,153.018C102,151.526 103.196,150.33 104.688,150.33L112.752,150.33L115.441,153.018L124.849,153.018C126.323,153.018 127.537,154.231 127.537,155.706L104.688,155.706L104.688,169.146L107.564,158.394L130.508,158.394L127.443,169.818C127.134,170.988 126.086,171.835 124.849,171.835Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M87,158.33L86,157.33L78,165.33L70,157.33L69,158.33L78,167.33L87,158.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Element-3">
+        <g id="text10" transform="matrix(27,0,0,27,206.26,129.657)">
+        </g>
+        <text x="125.22px" y="129.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">docker</text>
+        <g id="folder10">
+            <path d="M104.849,131.835L84.688,131.835C83.213,131.835 82,130.621 82,129.146L82,113.018C82,111.526 83.196,110.33 84.688,110.33L92.752,110.33L95.441,113.018L104.849,113.018C106.323,113.018 107.537,114.231 107.537,115.706L84.688,115.706L84.688,129.146L87.564,118.394L110.508,118.394L107.443,129.818C107.134,130.988 106.086,131.835 104.849,131.835Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M67,118.33L66,117.33L58,125.33L50,117.33L49,118.33L58,127.33L67,118.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Element-2">
+        <g id="text11" transform="matrix(27,0,0,27,105.22,89.6567)">
+        </g>
+        <g transform="matrix(27,0,0,27,112.722,89.6567)">
+        </g>
+        <g transform="matrix(27,0,0,27,153.235,89.6567)">
+        </g>
+        <text x="105.22px" y="89.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">ﬁles</text>
+        <g id="folder11">
+            <path d="M84.849,91.835L64.688,91.835C63.213,91.835 62,90.621 62,89.146L62,73.018C62,71.526 63.196,70.33 64.688,70.33L72.752,70.33L75.441,73.018L84.849,73.018C86.323,73.018 87.537,74.231 87.537,75.706L64.688,75.706L64.688,89.146L67.564,78.394L90.508,78.394L87.443,89.818C87.134,90.988 86.086,91.835 84.849,91.835Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M47,78.33L46,77.33L38,85.33L30,77.33L29,78.33L38,87.33L47,78.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Element-1">
+        <g id="text12" transform="matrix(27,0,0,27,193.299,49.6567)">
+        </g>
+        <text x="85.22px" y="49.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-size:27px;">playbook</text>
+        <g id="folder12">
+            <path d="M64.849,51.835L44.688,51.835C43.213,51.835 42,50.621 42,49.146L42,33.018C42,31.526 43.196,30.33 44.688,30.33L52.752,30.33L55.441,33.018L64.849,33.018C66.323,33.018 67.537,34.231 67.537,35.706L44.688,35.706L44.688,49.146L47.564,38.394L70.508,38.394L67.443,49.818C67.134,50.988 66.086,51.835 64.849,51.835Z" style="fill:#616161;fill-rule:nonzero;"/>
+            <path d="M27,38.33L26,37.33L18,45.33L10,37.33L9,38.33L18,47.33L27,38.33Z" style="fill:#616161;"/>
+        </g>
+    </g>
+    <g id="Info">
+        <g id="text13" transform="matrix(27,0,0,27,702.888,489.657)">
+        </g>
+        <g transform="matrix(27,0,0,27,710.39,489.657)">
+        </g>
+        <g transform="matrix(27,0,0,27,737.403,489.657)">
+        </g>
+        <text x="468.748px" y="489.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Shared compose ﬁle</text>
+        <g id="text14" transform="matrix(27,0,0,27,755.412,409.657)">
+        </g>
+        <text x="468.748px" y="409.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Local templates folder</text>
+        <g id="text15" transform="matrix(27,0,0,27,513.77,289.657)">
+        </g>
+        <text x="468.748px" y="289.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># ...</text>
+        <g id="text16" transform="matrix(27,0,0,27,707.357,249.657)">
+        </g>
+        <text x="468.748px" y="249.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Encrypted secrets</text>
+        <g id="text17" transform="matrix(27,0,0,27,726.922,209.657)">
+        </g>
+        <text x="468.748px" y="209.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Optional data folder</text>
+        <g id="text18" transform="matrix(27,0,0,27,702.875,169.657)">
+        </g>
+        <text x="468.748px" y="169.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Inventory Host 01</text>
+        <g id="text19" transform="matrix(27,0,0,27,563.313,89.6567)">
+        </g>
+        <g transform="matrix(27,0,0,27,570.815,89.6567)">
+        </g>
+        <g transform="matrix(27,0,0,27,686.369,89.6567)">
+        </g>
+        <text x="468.748px" y="89.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Local ﬁles folder</text>
+        <g id="text20" transform="matrix(27,0,0,27,664.893,50.6567)">
+        </g>
+        <text x="468.748px" y="50.657px" style="font-family: 'system-ui', 'ArialMT', 'Arial', sans-serif;font-style:italic;font-size:27px;fill:#666;"># Your Playbook</text>
+    </g>
+</svg>

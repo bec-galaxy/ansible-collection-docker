@@ -1,0 +1,7 @@
+---
+version: '3.9'
+services:
+  nginx:
+    extends:
+      file: docker-compose.nginx.yml
+      service: nginx

@@ -1,0 +1,36 @@
+---
+namespace: bec
+name: docker
+
+version: 1.0.0
+readme: README.md
+authors:
+  - Patrick Becker <galaxy@thinkbox.center>
+
+description: A collection to install Docker and configuring an application stack.
+
+license:
+  - MIT
+
+tags:
+  - docker
+  - docker_ce
+  - docker_compose
+  - env
+  - environment
+  - container
+  - orchestration
+  - compose
+  - application
+  - linux
+
+dependencies: {}
+
+repository: https://github.com/bec-galaxy/ansible-collection-docker
+documentation: https://github.com/bec-galaxy/ansible-collection-docker
+homepage: https://github.com/bec-galaxy
+issues: https://github.com/bec-galaxy/ansible-collection-docker/issues
+
+build_ignore:
+  - "molecule"
+  - "*.tar.gz"

@@ -1,0 +1,25 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: ubuntu-20.04
+    image: ubuntu:20.04
+  - name: ubuntu-22.04
+    image: ubuntu:22.04
+  - name: debian-11
+    image: debian:11
+  - name: debian-10
+    image: debian:10
+provisioner:
+  name: ansible
+  config_options:
+    tags:
+      run: setup
+  inventory:
+    group_vars:
+      all:
+        ansible_user: root
+scenario:
+  name: default

@@ -1,0 +1,14 @@
+---
+docker_compose_environment: "files/docker/{{ inventory_hostname }}"
+
+docker_compose_templates: "templates/shared"
+docker_compose_destination: "/opt/docker"
+docker_compose_permissions: "0644"
+
+docker_compose_nocache: false
+docker_compose_remove_orphans: true
+
+docker_compose_login: false
+docker_compose_registry: "https://registry-1.docker.io/v2/"
+docker_compose_username: ""
+docker_compose_password: ""

@@ -1,0 +1,32 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    # - name: Verify Docker host
+    #   become: true
+    #   block:
+    #     - name: Get information about the Docker host
+    #       community.docker.docker_host_info:
+    #       register: docker_system
+
+    #     - name: Output information about the Docker host
+    #       ansible.builtin.debug:
+    #         var: docker_system.host_info
+
+    # # This step checks the following things:
+    # #
+    # # - Was the docker-compose template copied?
+    # # - Was the .env file copied? (Defines NGINX_PORT=80)
+    # # - Was the .env file found by docker-compose and the port inserted?
+    # # - Was the container started successfully?
+    # # - Was the static html file found by the webserver?
+    # # - Were the static html file permissions set correctly?
+    # #
+    # - name: Ensure that the webserver is running correctly
+    #   ansible.builtin.get_url:
+    #     url: http://localhost
+    #     dest: /tmp/index.html
+    #     mode: "0644"
+    #     force: true
+    #     checksum: sha1:312b6eaa1dae9e3d2975bd5526d3064e1c39d0dd

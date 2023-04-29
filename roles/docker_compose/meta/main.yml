@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: Patrick Becker <galaxy@thinkbox.center>
+  description: Builds a custom Docker environment.
+  license: MIT
+
+  min_ansible_version: "2.13"
+
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+    - name: Ubuntu
+      versions:
+        - jammy
+        - focal
+
+dependencies: []

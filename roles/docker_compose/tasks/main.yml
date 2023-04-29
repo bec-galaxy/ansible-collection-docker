@@ -1,0 +1,69 @@
+---
+- name: Ensure variables are set
+  ansible.builtin.assert:
+    that:
+      - docker_compose_environment is defined
+      - docker_compose_environment | length > 0
+      - docker_compose_templates is defined
+      - docker_compose_templates | length > 0
+      - docker_compose_destination is defined
+      - docker_compose_destination | length > 0
+      - docker_compose_permissions is defined
+      - docker_compose_permissions | length > 0
+      - docker_compose_nocache is defined
+      - docker_compose_remove_orphans is defined
+      - docker_compose_login is defined
+      - docker_compose_registry is defined
+      - docker_compose_registry | length > 0
+      - docker_compose_username is defined
+      - docker_compose_password is defined
+
+- name: Ensure files are present
+  when: not ansible_check_mode
+  become: true
+  tags:
+    - docker
+    - compose
+    - setup
+  block:
+    - name: Ensure destination directory exists
+      ansible.builtin.file:
+        path: "{{ docker_compose_destination }}"
+        mode: "{{ docker_compose_permissions }}"
+        state: directory
+
+    - name: Copy templates to destination directory
+      ansible.builtin.template:
+        src: "{{ item }}"
+        dest: "{{ docker_compose_destination }}/{{ item | basename | regex_replace('\\.j2', '') }}"
+        mode: "{{ docker_compose_permissions }}"
+      with_fileglob: "{{ docker_compose_templates }}/*"
+
+    - name: Copy environment to destination directory
+      when: not ansible_check_mode
+      ansible.builtin.copy:
+        src: "{{ docker_compose_environment }}/"
+        dest: "{{ docker_compose_destination }}"
+        mode: "{{ docker_compose_permissions }}"
+
+- name: Ensure containers are started
+  become: true
+  tags:
+    - docker
+    - compose
+  block:
+    - name: Log into a Docker registry
+      when: docker_compose_login
+      community.docker.docker_login:
+        registry: "{{ docker_compose_registry }}"
+        username: "{{ docker_compose_username }}"
+        password: "{{ docker_compose_password }}"
+      register: docker_login
+
+    - name: Deploy containers
+      when: not ansible_check_mode
+      community.docker.docker_compose:
+        project_src: "{{ docker_compose_destination }}"
+        nocache: "{{ docker_compose_nocache }}"
+        remove_orphans: "{{ docker_compose_remove_orphans }}"
+      register: docker_compose

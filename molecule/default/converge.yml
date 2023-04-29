@@ -1,0 +1,28 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    # Use one source folder for all hosts.
+    docker_compose_environment: "files/docker/instance"
+  tasks:
+    - name: "Include role"
+      ansible.builtin.include_role:
+        name: "bec.docker.docker_ce"
+      tags:
+        - setup
+
+    - name: "Include role"
+      ansible.builtin.include_role:
+        name: "bec.docker.docker_compose"
+      tags:
+        - setup
+
+    - name: Output information about the Docker login step
+      when: docker_login is defined
+      ansible.builtin.debug:
+        var: docker_login
+
+    - name: Output information about the Docker compose step
+      when: docker_compose is defined
+      ansible.builtin.debug:
+        var: docker_compose

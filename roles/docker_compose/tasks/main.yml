@@ -51,6 +51,7 @@
   tags:
     - docker
     - compose
+    - service
   block:
     - name: Log into a Docker registry
       when: docker_compose_login

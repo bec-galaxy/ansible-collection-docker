@@ -8,14 +8,10 @@
     - name: "Include role"
       ansible.builtin.include_role:
         name: "bec.docker.docker_ce"
-      tags:
-        - setup
 
     - name: "Include role"
       ansible.builtin.include_role:
         name: "bec.docker.docker_compose"
-      tags:
-        - setup
 
     - name: Output information about the Docker login step
       when: docker_login is defined

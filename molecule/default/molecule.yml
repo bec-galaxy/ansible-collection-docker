@@ -16,7 +16,7 @@ provisioner:
   name: ansible
   config_options:
     tags:
-      run: setup
+      skip: service
   inventory:
     group_vars:
       all:

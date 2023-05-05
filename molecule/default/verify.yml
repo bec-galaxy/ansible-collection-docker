@@ -3,30 +3,26 @@
   hosts: all
   gather_facts: false
   tasks:
-    # - name: Verify Docker host
-    #   become: true
-    #   block:
-    #     - name: Get information about the Docker host
-    #       community.docker.docker_host_info:
-    #       register: docker_system
+    # This step checks the following things:
+    #
+    # - Was the docker-compose templates copied?
+    # - Was the .env file copied? (Defines NGINX_PORT=80)
+    # - Was the .env file found by docker-compose and the variables inserted?
+    #
+    - name: Get Docker compose fingerprint
+      ansible.builtin.command: docker compose config --hash=nginx
+        chdir=/opt/docker
+      changed_when: false
+      register: docker_compose_hash
 
-    #     - name: Output information about the Docker host
-    #       ansible.builtin.debug:
-    #         var: docker_system.host_info
+    - name: Output information about the Docker fingerprint step
+      ansible.builtin.debug:
+        msg: "{{ docker_compose_hash }}"
 
-    # # This step checks the following things:
-    # #
-    # # - Was the docker-compose template copied?
-    # # - Was the .env file copied? (Defines NGINX_PORT=80)
-    # # - Was the .env file found by docker-compose and the port inserted?
-    # # - Was the container started successfully?
-    # # - Was the static html file found by the webserver?
-    # # - Were the static html file permissions set correctly?
-    # #
-    # - name: Ensure that the webserver is running correctly
-    #   ansible.builtin.get_url:
-    #     url: http://localhost
-    #     dest: /tmp/index.html
-    #     mode: "0644"
-    #     force: true
-    #     checksum: sha1:312b6eaa1dae9e3d2975bd5526d3064e1c39d0dd
+    - name: Validate Docker compose output
+      ansible.builtin.assert:
+        that:
+          - docker_compose_hash is defined
+          - docker_compose_hash.stdout == "nginx 7b99edc1470b82c23cbd630f2c4714c8837519f788c752f4fcca92d975a30390"
+        fail_msg: "Required Docker compose files are missing or incomplete."
+        success_msg: "Required Docker compose files were successfully verified."

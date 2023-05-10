@@ -5,9 +5,10 @@
 A collection to install **Docker** and configuring an **application stack**.
 
 The following steps are supported:
-- Distribute a shared `docker-compose.yml` by using the template function.
-- Distribute encrypted secrets through an `.env` file.
-- Distribute files and folders for a mapped volume.
+
+* Distribute a shared `docker-compose.yml` by using the template function.
+* Distribute encrypted secrets through an `.env` file.
+* Distribute files and folders for a mapped volume.
 
 [Click here to go to the documentation](https://github.com/bec-galaxy/ansible-collection-docker/tree/main/roles/docker_compose).
 

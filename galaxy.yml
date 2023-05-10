@@ -24,7 +24,9 @@ tags:
   - application
   - linux
 
-dependencies: {}
+dependencies:
+  community.docker: "*"
+  community.general: "*"
 
 repository: https://github.com/bec-galaxy/ansible-collection-docker
 documentation: https://github.com/bec-galaxy/ansible-collection-docker

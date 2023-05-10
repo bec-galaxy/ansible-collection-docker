@@ -58,10 +58,12 @@ graph LR
 
 ## Example
 
-Here are a example of how this role can be used.
+Here are example of how this role can be used.
+
+In this example, a web server is deployed using Docker. It distributes host-specific environment variables and a web page.
 
 Your playbook can look like this:
-<img src="../../docs/example.svg"/>
+<img src="../../docs/example_1.svg"/>
 
 Content of the `main.yml` file:
 ```yaml
@@ -107,6 +109,10 @@ NGINX_PORT=80
 Docker Compose takes the environment variables from the `.env` file and puts them into `docker-compose.yml.j2` - this allows a host specific configuration.
 
 You can test the output yourself with the `docker-compose config` command.
+
+If a **shared template** should be used for the website, this can be implemented in this way:
+<img src="../../docs/example_2.svg"/>
+All files in the template folder `shared` are copied to the target systems.
 
 ## Licence
 

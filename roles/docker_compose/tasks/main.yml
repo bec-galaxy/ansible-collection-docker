@@ -44,7 +44,7 @@
       when: item.state == 'file'
       ansible.builtin.template:
         src: "{{ item.src }}"
-        dest: "{{ docker_compose_destination }}/{{ item.path | basename | regex_replace('\\.j2', '') }}"
+        dest: "{{ docker_compose_destination }}/{{ item.path | regex_replace('.j2$', ignorecase=true) }}"
         mode: "{{ docker_compose_permissions }}"
       with_community.general.filetree: "{{ docker_compose_templates }}"
 

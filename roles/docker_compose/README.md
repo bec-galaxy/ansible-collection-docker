@@ -108,7 +108,7 @@ NGINX_PORT=80
 
 Docker Compose takes the environment variables from the `.env` file and puts them into `docker-compose.yml.j2` - this allows a host specific configuration.
 
-You can test the output yourself with the `docker-compose config` command.
+You can test the output yourself with the `docker compose config` command.
 
 If a **shared template** should be used for the website, this can be implemented in this way:
 <img src="../../docs/example_2.svg"/>

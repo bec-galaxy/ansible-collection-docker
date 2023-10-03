@@ -23,6 +23,23 @@
       ansible.builtin.assert:
         that:
           - docker_compose_hash is defined
-          - docker_compose_hash.stdout == "nginx 7b99edc1470b82c23cbd630f2c4714c8837519f788c752f4fcca92d975a30390"
+          - docker_compose_hash.stdout == "nginx c6c17a5aec732e20a5801f975edce845069526c172df5ffba6cf9a773101011a"
         fail_msg: "Required Docker compose files are missing or incomplete."
         success_msg: "Required Docker compose files were successfully verified."
+
+    - name: Ensure templates have been copied
+      block:
+        - name: Get file stats
+          ansible.builtin.stat:
+            path: "/opt/docker/data/shared.html"
+          register: file_info
+
+        - name: Verify file stats
+          ansible.builtin.assert:
+            that:
+              - file_info is defined
+              - file_info.stat is defined
+              - file_info.stat.exists == true
+              - file_info.stat.isdir == false
+            fail_msg: "File 'shared.html' was not found."
+            success_msg: "File 'shared.html' has passed."

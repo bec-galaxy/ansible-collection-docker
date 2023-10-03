@@ -1,0 +1,26 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+platforms:
+  - name: ubuntu-22.04
+    box: generic/ubuntu2204
+    memory: 4096
+    cpus: 2
+    provider_options:
+      linked_clone: true
+    config_options:
+      ssh.keep_alive: true
+  - name: ubuntu-20.04
+    box: generic/ubuntu2004
+    memory: 4096
+    cpus: 4
+    provider_options:
+      linked_clone: true
+    config_options:
+      ssh.keep_alive: true
+provisioner:
+  name: ansible
+scenario:
+  name: vagrant

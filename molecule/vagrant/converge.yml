@@ -1,0 +1,27 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    # Use one source folder for all hosts.
+    docker_compose_environment: "files/docker/instance"
+
+    # Use executable rights for the nginx html folder.
+    docker_compose_permissions: "0755"
+  tasks:
+    - name: "Include role"
+      ansible.builtin.include_role:
+        name: "bec.docker.docker_ce"
+
+    - name: "Include role"
+      ansible.builtin.include_role:
+        name: "bec.docker.docker_compose"
+
+    - name: Output information about the Docker login step
+      when: docker_login is defined
+      ansible.builtin.debug:
+        var: docker_login
+
+    - name: Output information about the Docker compose step
+      when: docker_compose is defined
+      ansible.builtin.debug:
+        var: docker_compose

@@ -11,14 +11,11 @@
 
 - name: Add Docker apt-repository
   ansible.builtin.apt_repository:
-    repo: "deb {{ signature }} https://download.docker.com/linux/{{ distribution }} {{ release }} stable"
+    filename: docker
+    repo: "{{ lookup('ansible.builtin.template', 'docker.list.j2') }}"
     state: present
     update_cache: true
   become: true
-  vars:
-    signature: "[arch=amd64 signed-by=/usr/share/keyrings/docker.asc]"
-    distribution: "{{ ansible_distribution | lower }}"
-    release: "{{ ansible_distribution_release | lower }}"
   tags:
     - docker
     - setup
@@ -66,4 +63,5 @@
   become: true
   tags:
     - docker
+    - setup
     - service

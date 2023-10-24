@@ -26,7 +26,7 @@
     - docker
     - compose
   notify:
-    - Stop containers
+    - Restart containers
   block:
     - name: Ensure destination directory exists
       ansible.builtin.file:
@@ -57,7 +57,7 @@
     - docker
     - compose
   notify:
-    - Stop containers
+    - Restart containers
   block:
     - name: Copy environment to destination directory
       when: item.state == 'file'
@@ -89,10 +89,6 @@
         username: "{{ docker_compose_username }}"
         password: "{{ docker_compose_password }}"
       register: docker_login
-
-    - name: Stop containers if files has changed
-      ansible.builtin.meta: flush_handlers
-      when: docker_compose_restart_on_change
 
     - name: Deploy containers
       when: not ansible_check_mode

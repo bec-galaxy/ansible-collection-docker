@@ -1,7 +1,17 @@
 ---
-- name: Stop containers
-  when: not ansible_check_mode and 'service' not in ansible_skip_tags
+- name: Restart containers if files has changed
   become: true
+  when:
+    - not ansible_check_mode
+    - docker_compose is defined
+    - docker_compose.changed == false
+    - docker_compose_restart_on_change is defined
+    - docker_compose_restart_on_change == true
+  tags:
+    - docker
+    - compose
+    - service
   community.docker.docker_compose:
     project_src: "{{ docker_compose_destination }}"
-    state: absent
+    restarted: true
+  listen: "Restart containers"

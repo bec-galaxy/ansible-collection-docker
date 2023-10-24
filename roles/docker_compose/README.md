@@ -16,18 +16,19 @@ The following steps are supported:
 
 Default variables in this playbook.
 
-| Name                          | Description                                                                                                                                   | Default Value                           |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| docker_compose_environment    | The local directory where `.env` and other host specific files are located.                                                                   | `files/docker/{{ inventory_hostname }}` |
-| docker_compose_templates      | The local directory where `docker-compose.yml.j2` and other shared templates are located.                                                     | `templates/shared`                      |
-| docker_compose_destination    | The remote directory where shared and host specific files are copied to.                                                                      | `/opt/docker`                           |
-| docker_compose_permissions    | The permissions of the copied files on the target system.                                                                                     | `0644`                                  |
-| docker_compose_nocache        | Enable this option to ignore the image cache when performing the build.                                                                       | `false`                                 |
-| docker_compose_remove_orphans | Removes containers that were created in a previous run of `docker-compose up` but have since been deleted from the `docker-compose.yml` file. | `true`                                  |
-| docker_compose_login          | Specifies whether to perform a Docker Registry login.                                                                                         | `false`                                 |
-| docker_compose_registry       | Url for a public or private Docker Registry.                                                                                                  | `https://registry-1.docker.io/v2/`      |
-| docker_compose_username       | Username for the Docker Registry.                                                                                                             | ` `                                     |
-| docker_compose_password       | Password for the Docker Registry.                                                                                                             | ` `                                     |
+| Name                             | Description                                                                                                                                   | Default Value                           |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| docker_compose_environment       | The local directory where `.env` and other host specific files are located.                                                                   | `files/docker/{{ inventory_hostname }}` |
+| docker_compose_templates         | The local directory where `docker-compose.yml.j2` and other shared templates are located.                                                     | `templates/shared`                      |
+| docker_compose_destination       | The remote directory where shared and host specific files are copied to.                                                                      | `/opt/docker`                           |
+| docker_compose_permissions       | The permissions of the copied files on the target system.                                                                                     | `0644`                                  |
+| docker_compose_nocache           | Enable this option to ignore the image cache when performing the build.                                                                       | `false`                                 |
+| docker_compose_remove_orphans    | Removes containers that were created in a previous run of `docker-compose up` but have since been deleted from the `docker-compose.yml` file. | `true`                                  |
+| docker_compose_restart_on_change | Restarting Docker containers after a change to templates or files.                                                                            | `true`                                  |
+| docker_compose_login             | Specifies whether to perform a Docker Registry login.                                                                                         | `false`                                 |
+| docker_compose_registry          | Url for a public or private Docker Registry.                                                                                                  | `https://registry-1.docker.io/v2/`      |
+| docker_compose_username          | Username for the Docker Registry.                                                                                                             | ` `                                     |
+| docker_compose_password          | Password for the Docker Registry.                                                                                                             | ` `                                     |
 
 ## How it works
 

@@ -2,11 +2,11 @@
 - name: Restart containers if files has changed
   become: true
   when:
-    - not ansible_check_mode
     - docker_compose is defined
-    - docker_compose.changed == false
     - docker_compose_restart_on_change is defined
-    - docker_compose_restart_on_change == true
+    - not ansible_check_mode
+    - not docker_compose.changed
+    - docker_compose_restart_on_change
   tags:
     - docker
     - compose

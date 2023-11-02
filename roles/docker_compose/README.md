@@ -6,9 +6,9 @@
 This role installs **Docker Compose** and configures an **application stack** for a list of hosts.
 
 The following steps are supported:
-- Distribute shared files like `docker-compose.yml` by using the template function.
-- Distribute encrypted secrets through an `.env` file.
-- Distribute files and folders for a mapped volume.
+* Distribute shared files like `docker-compose.yml` by using the template function.
+* Distribute encrypted secrets through an `.env` file.
+* Distribute files and folders for a mapped volume.
 
 **Secrets** *(.env)*, **files and folders** *(data volume)* can be <u>configured individually for each host</u>. Only the files in the template folder like `docker-compose.yml.j2` are shared between all hosts.
 

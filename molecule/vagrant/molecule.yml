@@ -4,6 +4,14 @@ dependency:
 driver:
   name: vagrant
 platforms:
+  # - name: ubuntu-23.04
+  #   box: generic/ubuntu2304
+  #   memory: 4096
+  #   cpus: 2
+  #   provider_options:
+  #     linked_clone: true
+  #   config_options:
+  #     ssh.keep_alive: true
   - name: ubuntu-22.04
     box: generic/ubuntu2204
     memory: 4096
@@ -14,6 +22,22 @@ platforms:
       ssh.keep_alive: true
   - name: ubuntu-20.04
     box: generic/ubuntu2004
+    memory: 4096
+    cpus: 4
+    provider_options:
+      linked_clone: true
+    config_options:
+      ssh.keep_alive: true
+  # - name: debian-12
+  #   box: generic/debian12
+  #   memory: 4096
+  #   cpus: 4
+  #   provider_options:
+  #     linked_clone: true
+  #   config_options:
+  #     ssh.keep_alive: true
+  - name: debian-11
+    box: generic/debian11
     memory: 4096
     cpus: 4
     provider_options:

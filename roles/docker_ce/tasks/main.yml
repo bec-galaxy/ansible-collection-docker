@@ -43,7 +43,7 @@
     - docker
     - setup
 
-- name: Ensure python modules are installed
+- name: Ensure Python modules are installed
   when: not ansible_check_mode
   ansible.builtin.pip:
     name:

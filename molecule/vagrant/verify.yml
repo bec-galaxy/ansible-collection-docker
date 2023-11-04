@@ -1,0 +1,29 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    # This step checks the following things:
+    #
+    # - Was the docker-compose templates copied?
+    # - Was the .env file copied? (Defines NGINX_PORT=80)
+    # - Was the .env file found by docker-compose and the variables inserted?
+    # - Was the container started correctly?
+    #
+    - name: Download nginx website index.html
+      ansible.builtin.get_url:
+        url: http://localhost/index.html
+        dest: /tmp/index.html
+        mode: "0644"
+        checksum: "sha256:588c119d7665f1240a6b2814ca8abab3e8ccd65b618091df55c413530eceb90c"
+
+    # Ensure that the .j2 extension is removed only at the end of the path.
+    #
+    # .j2-test/.j2-file.html.j2 -> .j2-test/.j2-file.html
+    #
+    - name: Download test website .j2-file.html
+      ansible.builtin.get_url:
+        url: http://localhost/.j2-test/.j2-file.html
+        dest: /tmp/.j2-file.html
+        mode: "0644"
+        checksum: "sha256:6e4798029dc7fc82ff9b6904eaa735012dc51a9a93e015a25e74478436ae9157"

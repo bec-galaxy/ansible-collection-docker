@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Patrick Becker <galaxy@thinkbox.center>
-  description: Install docker from the official repository.
+  description: Install Docker from the official repository.
   license: MIT
 
   min_ansible_version: "2.13"
@@ -10,7 +10,6 @@ galaxy_info:
     - name: Debian
       versions:
         - bullseye
-        - buster
     - name: Ubuntu
       versions:
         - jammy

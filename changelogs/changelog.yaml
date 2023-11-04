@@ -1,2 +1,18 @@
 ---
-releases: {}
+releases:
+  1.1.0:
+    changes:
+      minor_changes:
+        - Added unit test for .j2 extensions.
+        - Use Vagrant in a 2nd unit tests for better code coverage.
+        - Better log output for copied files.
+      breaking_changes:
+        - Permissions on copied files are now set recursively.
+          For templates community.general.filetree was used, here it worked as expected.
+          For files ansible.builtin.copy was used, here the problem occurred. Now filetree is used everywhere.
+        - Filename of the Docker repository has changed to docker.list, before that the
+          download name of the file was used.
+      bugfixes:
+        - Files in the shared folder are now templated with the correct subpath.
+        - Removing the .j2 extension only at the end of the filename.
+    release_date: "2023-10-03"

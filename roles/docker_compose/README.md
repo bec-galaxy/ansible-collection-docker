@@ -6,9 +6,9 @@
 This role installs **Docker Compose** and configures an **application stack** for a list of hosts.
 
 The following steps are supported:
-- Distribute shared files like `docker-compose.yml` by using the template function.
-- Distribute encrypted secrets through an `.env` file.
-- Distribute files and folders for a mapped volume.
+* Distribute shared files like `docker-compose.yml` by using the template function.
+* Distribute encrypted secrets through an `.env` file.
+* Distribute files and folders for a mapped volume.
 
 **Secrets** *(.env)*, **files and folders** *(data volume)* can be <u>configured individually for each host</u>. Only the files in the template folder like `docker-compose.yml.j2` are shared between all hosts.
 
@@ -16,18 +16,19 @@ The following steps are supported:
 
 Default variables in this playbook.
 
-| Name                          | Description                                                                                                                                   | Default Value                           |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| docker_compose_environment    | The local directory where `.env` and other host specific files are located.                                                                   | `files/docker/{{ inventory_hostname }}` |
-| docker_compose_templates      | The local directory where `docker-compose.yml.j2` and other shared templates are located.                                                     | `templates/shared`                      |
-| docker_compose_destination    | The remote directory where shared and host specific files are copied to.                                                                      | `/opt/docker`                           |
-| docker_compose_permissions    | The permissions of the copied files on the target system.                                                                                     | `0644`                                  |
-| docker_compose_nocache        | Enable this option to ignore the image cache when performing the build.                                                                       | `false`                                 |
-| docker_compose_remove_orphans | Removes containers that were created in a previous run of `docker-compose up` but have since been deleted from the `docker-compose.yml` file. | `true`                                  |
-| docker_compose_login          | Specifies whether to perform a Docker Registry login.                                                                                         | `false`                                 |
-| docker_compose_registry       | Url for a public or private Docker Registry.                                                                                                  | `https://registry-1.docker.io/v2/`      |
-| docker_compose_username       | Username for the Docker Registry.                                                                                                             | ` `                                     |
-| docker_compose_password       | Password for the Docker Registry.                                                                                                             | ` `                                     |
+| Name                             | Description                                                                                                                                   | Default Value                           |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| docker_compose_environment       | The local directory where `.env` and other host specific files are located.                                                                   | `files/docker/{{ inventory_hostname }}` |
+| docker_compose_templates         | The local directory where `docker-compose.yml.j2` and other shared templates are located.                                                     | `templates/shared`                      |
+| docker_compose_destination       | The remote directory where shared and host specific files are copied to.                                                                      | `/opt/docker`                           |
+| docker_compose_permissions       | The permissions of the copied files on the target system.                                                                                     | `0644`                                  |
+| docker_compose_nocache           | Enable this option to ignore the image cache when performing the build.                                                                       | `false`                                 |
+| docker_compose_remove_orphans    | Removes containers that were created in a previous run of `docker-compose up` but have since been deleted from the `docker-compose.yml` file. | `true`                                  |
+| docker_compose_restart_on_change | Restarting Docker containers after a change to templates or files.                                                                            | `true`                                  |
+| docker_compose_login             | Specifies whether to perform a Docker Registry login.                                                                                         | `false`                                 |
+| docker_compose_registry          | Url for a public or private Docker Registry.                                                                                                  | `https://registry-1.docker.io/v2/`      |
+| docker_compose_username          | Username for the Docker Registry.                                                                                                             | ` `                                     |
+| docker_compose_password          | Password for the Docker Registry.                                                                                                             | ` `                                     |
 
 ## How it works
 
@@ -108,7 +109,7 @@ NGINX_PORT=80
 
 Docker Compose takes the environment variables from the `.env` file and puts them into `docker-compose.yml.j2` - this allows a host specific configuration.
 
-You can test the output yourself with the `docker-compose config` command.
+You can test the output yourself with the `docker compose config` command.
 
 If a **shared template** should be used for the website, this can be implemented in this way:
 <img src="../../docs/example_2.svg"/>

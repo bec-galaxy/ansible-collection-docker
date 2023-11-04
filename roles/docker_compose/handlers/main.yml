@@ -1,0 +1,17 @@
+---
+- name: Restart containers if files has changed
+  become: true
+  when:
+    - docker_compose is defined
+    - docker_compose_restart_on_change is defined
+    - not ansible_check_mode
+    - not docker_compose.changed
+    - docker_compose_restart_on_change
+  tags:
+    - docker
+    - compose
+    - service
+  community.docker.docker_compose:
+    project_src: "{{ docker_compose_destination }}"
+    restarted: true
+  listen: "Restart containers"

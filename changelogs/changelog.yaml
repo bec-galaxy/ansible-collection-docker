@@ -16,3 +16,13 @@ releases:
         - Files in the shared folder are now templated with the correct subpath.
         - Removing the .j2 extension only at the end of the filename.
     release_date: "2023-10-03"
+  1.2.0:
+    changes:
+      known_issues:
+        - Docker python package is incompatible with the deprecated docker-compose lib in the latest version.
+        - The docker.compose module uses the deprecated docker-compose python package.
+      breaking_changes:
+        - Files were copied using the ansible.builtin.template command instead of the ansible.builtin.copy command.
+      bugfixes:
+        - Files have now been copied using the ansible.builtin.copy command.
+    release_date: "2023-12-31"

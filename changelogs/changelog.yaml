@@ -18,6 +18,8 @@ releases:
     release_date: "2023-10-03"
   1.2.0:
     changes:
+      minor_changes:
+        - Documentation updated.
       known_issues:
         - Docker python package is incompatible with the deprecated docker-compose lib in the latest version.
         - The docker.compose module uses the deprecated docker-compose python package.

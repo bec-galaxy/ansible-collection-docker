@@ -1,5 +1,3 @@
-<img align="right" width="22%" src="../../docs/logo.png" alt="docker compose logo"/>
-
 # Docker Compose Role for Ansible
 
 
@@ -64,7 +62,7 @@ Here are example of how this role can be used.
 In this example, a web server is deployed using Docker. It distributes host-specific environment variables and a web page.
 
 Your playbook can look like this:
-<img src="../../docs/example_1.svg"/>
+<img src="https://raw.githubusercontent.com/bec-galaxy/ansible-collection-docker/main/docs/example_1.svg"/>
 
 Content of the `main.yml` file:
 ```yaml
@@ -112,16 +110,5 @@ Docker Compose takes the environment variables from the `.env` file and puts the
 You can test the output yourself with the `docker compose config` command.
 
 If a **shared template** should be used for the website, this can be implemented in this way:
-<img src="../../docs/example_2.svg"/>
+<img src="https://raw.githubusercontent.com/bec-galaxy/ansible-collection-docker/main/docs/example_2.svg"/>
 All files in the template folder `shared` are copied to the target systems.
-
-## Licence
-
-<img align="right" width="35%" src="../../docs/asset.svg" alt="docker compose logo"/>
-
-This project is licensed under MIT - See the [LICENSE](LICENSE) file for more information.
-
----
-
-&uarr; [Back to top](#)
-
